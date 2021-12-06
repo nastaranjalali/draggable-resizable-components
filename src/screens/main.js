@@ -10,12 +10,38 @@ function Main() {
         <DroppableLayout className="layout" />
       </div>
       <div className="draggabeContainer">
-        <Paragraph className="draggable" />
-        <Picture className="draggable" />
-        <Paragraph className="draggable" />
-        <Picture className="draggable" />
-        <Paragraph className="draggable" />
-        <Picture className="draggable" />
+        <div className="element">
+          <Paragraph
+            className="draggable"
+            text={
+              "Lorem ipsum dolor sit amet,  vulputate sed quam eu, cursus faucibus elit. Maecenas tortor massa, laoreet vitae condimentum ac, luctus pulvinar velit. Cras et lig"
+            }
+          />
+        </div>
+        <div className="element">
+          <Picture className="draggable" />
+        </div>
+
+        <div className="element">
+          <Paragraph
+            className="draggable"
+            text={"Lorem ipsum dolor sit aasfdasc gfrdg erlit. Cras et lig"}
+          />
+        </div>
+        <div className="element">
+          <Picture className="draggable" />
+        </div>
+        <div className="element">
+          <Paragraph
+            className="draggable"
+            text={
+              "Lorem ipsum dLorem ipsum dolor situcndimentum ac, luctus pulvinar velit. Cras et ligestibulum mauris sem, vulputate sed quam eu, cursus faucibus elit. Maecenas tortor massa, laoreet vitae condimentum ac, luctus pulvinar velit. Cras et lig"
+            }
+          />
+        </div>
+        <div className="element">
+          <Picture className="draggable" />
+        </div>
       </div>
     </div>
   );

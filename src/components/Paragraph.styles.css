@@ -1,0 +1,9 @@
+.paragraphRoot {
+  border: 1px solid #999;
+  width: 100%;
+  height: 100%;
+}
+.text {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
