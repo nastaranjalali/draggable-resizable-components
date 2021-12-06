@@ -3,6 +3,10 @@ import DroppableLayout from "../components/DroppableLayout";
 import Paragraph from "../components/Paragraph";
 import Picture from "../components/Picture";
 import "./main.styles.css";
+import pic1 from "../assets/backpack-1.jpg";
+import pic2 from "../assets/camera-1.jpg";
+import pic3 from "../assets/controler-1.jpg";
+
 function Main() {
   return (
     <div className="mainRoot">
@@ -19,7 +23,7 @@ function Main() {
           />
         </div>
         <div className="element">
-          <Picture className="draggable" />
+          <Picture className="draggable" url={pic1} />
         </div>
 
         <div className="element">
@@ -29,7 +33,7 @@ function Main() {
           />
         </div>
         <div className="element">
-          <Picture className="draggable" />
+          <Picture className="draggable" url={pic2} />
         </div>
         <div className="element">
           <Paragraph
@@ -40,7 +44,7 @@ function Main() {
           />
         </div>
         <div className="element">
-          <Picture className="draggable" />
+          <Picture className="draggable" url={pic3} />
         </div>
       </div>
     </div>
