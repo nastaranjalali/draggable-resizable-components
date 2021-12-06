@@ -1,0 +1,15 @@
+.mainRoot {
+  width: 100%;
+  display: flex;
+}
+.droppableContainer {
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.draggableContainer {
+  width: 40%;
+}

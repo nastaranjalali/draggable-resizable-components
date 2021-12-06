@@ -1,0 +1,34 @@
+.droppableRoot {
+  width: 90%;
+  height: 450px;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 0;
+}
+.custom-gutter-horizontal {
+  height: 100%;
+  padding: 0 !important;
+  width: 2px !important;
+  background: rgb(209, 209, 209) !important;
+}
+.custom-gutter-horizontal:hover {
+  background: azure;
+}
+
+.custom-dragger-horizontal {
+  background: rgb(139, 139, 139) !important;
+  width: 2px !important;
+}
+.custom-gutter-vertical {
+  width: 100%;
+  padding: 0 !important;
+  height: 2px !important;
+  background: rgb(209, 209, 209) !important;
+}
+.custom-gutter-vertical:hover {
+  background: azure;
+}
+
+.custom-dragger-vertical {
+  background: rgb(139, 139, 139) !important;
+  height: 2px !important;
+}
