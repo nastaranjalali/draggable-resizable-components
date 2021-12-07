@@ -1,51 +1,62 @@
 import React from "react";
 import DroppableLayout from "../components/DroppableLayout";
-import Paragraph from "../components/Paragraph";
-import Picture from "../components/Picture";
 import "./main.styles.css";
 import pic1 from "../assets/backpack-1.jpg";
 import pic2 from "../assets/camera-1.jpg";
 import pic3 from "../assets/controler-1.jpg";
+import DraggableComponents from "../components/DraggableComponents";
 
 function Main() {
+  const initialValues = [
+    {
+      id: 1,
+      text: "Lorem ipsum dLorem ipsum dolor situcndimentum ac, luctus pulvinar velit. Cras et ligestibulum mauris ",
+      url: "",
+    },
+    {
+      id: 2,
+      text: "",
+      url: pic1,
+    },
+    {
+      id: 3,
+      text: "Lorem ipsum dLorem ipsum dolor situcndimentum ac,  ",
+      url: "",
+    },
+    {
+      id: 4,
+      text: "",
+      url: pic2,
+    },
+    {
+      id: 5,
+      text: "Lorem ipsum dLorem ipsum dolor situcndimentum ac, ipsum dolor situcndimentum ac, luctus pulvinar velit. Cras et ligestibul luctus pulvinar velit. Cras et ligestibulum mauris ",
+      url: "",
+    },
+    {
+      id: 6,
+      text: "",
+      url: pic3,
+    },
+  ];
+
   return (
     <div className="mainRoot">
       <div className="droppableContainer">
-        <DroppableLayout className="layout" />
+        <DroppableLayout className="layout" ComponentList={initialValues} />
       </div>
       <div className="draggabeContainer">
-        <div className="element">
-          <Paragraph
-            className="draggable"
-            text={
-              "Lorem ipsum dolor sit amet,  vulputate sed quam eu, cursus faucibus elit. Maecenas tortor massa, laoreet vitae condimentum ac, luctus pulvinar velit. Cras et lig"
-            }
-          />
-        </div>
-        <div className="element">
-          <Picture className="draggable" url={pic1} />
-        </div>
-
-        <div className="element">
-          <Paragraph
-            className="draggable"
-            text={"Lorem ipsum dolor sit aasfdasc gfrdg erlit. Cras et lig"}
-          />
-        </div>
-        <div className="element">
-          <Picture className="draggable" url={pic2} />
-        </div>
-        <div className="element">
-          <Paragraph
-            className="draggable"
-            text={
-              "Lorem ipsum dLorem ipsum dolor situcndimentum ac, luctus pulvinar velit. Cras et ligestibulum mauris sem, vulputate sed quam eu, cursus faucibus elit. Maecenas tortor massa, laoreet vitae condimentum ac, luctus pulvinar velit. Cras et lig"
-            }
-          />
-        </div>
-        <div className="element">
-          <Picture className="draggable" url={pic3} />
-        </div>
+        {initialValues.map((element, index) => {
+          return (
+            <DraggableComponents
+              key={index}
+              id={element.id}
+              url={element.url}
+              text={element.text}
+              droped={false}
+            />
+          );
+        })}
       </div>
     </div>
   );

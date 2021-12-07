@@ -1,7 +1,37 @@
 import React from "react";
 import Split, { SplitDirection } from "@devbookhq/splitter";
+import { useState } from "react";
 import "./DroppableLayout.styles.css";
-function DroppableLayout() {
+import { useDrop } from "react-dnd";
+import DraggableComponents from "./DraggableComponents";
+import Board from "./Board";
+function DroppableLayout({ ComponentList }) {
+  // const [board, setBoard] = useState([]);
+  // const [{ isOver }, drop] = useDrop(() => ({
+  //   accept: "draggableComponnets",
+  //   drop: (item) => {
+  //     addComponnetToBoard(item.id, 0);
+  //   },
+  //   collect: (monitor) => ({
+  //     isOver: !!monitor.isOver(),
+  //   }),
+  // }));
+  // const [{ isOver2 }, drop2] = useDrop(() => ({
+  //   accept: "draggableComponnets",
+  //   drop: (item) => {
+  //     addComponnetToBoard(item.id, 1);
+  //   },
+  //   collect: (monitor) => ({
+  //     isOver: !!monitor.isOver(),
+  //   }),
+  // }));
+  // const addComponnetToBoard = (id, boardNo) => {
+  //   const component = ComponentList.find((element) => id === element.id);
+  //   let tempboard = board;
+  //   tempboard[boardNo] = component;
+  //   setBoard(tempboard);
+  //   console.log(board);
+  // };
   return (
     <div className="droppableRoot">
       <Split
@@ -16,8 +46,8 @@ function DroppableLayout() {
           gutterClassName="custom-gutter-horizontal"
           draggerClassName="custom-dragger-horizontal"
         >
-          <div>Tile 1</div>
-          <div>Tile 2</div>
+          <Board ComponentList={ComponentList} />
+          <Board ComponentList={ComponentList} />
         </Split>
         <Split
           direction={SplitDirection.Horizontal}
@@ -25,8 +55,8 @@ function DroppableLayout() {
           draggerClassName="custom-dragger-horizontal"
           minWidths={[150, 150]}
         >
-          <div>Tile 3</div>
-          <div>Tile 4</div>
+          <Board ComponentList={ComponentList} />
+          <Board ComponentList={ComponentList} />
         </Split>
       </Split>
     </div>

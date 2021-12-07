@@ -32,3 +32,7 @@
   background: rgb(139, 139, 139) !important;
   height: 2px !important;
 }
+.cover {
+  width: 100%;
+  height: 100%;
+}
